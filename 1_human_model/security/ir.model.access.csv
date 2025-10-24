@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_human_human,access_human_human,model_human_human,base.group_user,1,1,1,1
+access_human_superhuman,access_human_superhuman,model_human_superhuman,base.group_user,1,1,1,1
+access_human_customer,access_human_customer,model_human_customer,base.group_user,1,1,1,1
+
+

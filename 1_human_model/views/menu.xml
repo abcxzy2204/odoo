@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <!-- Root Menu -->
+        <menuitem id="menu_root" 
+                  name="Human Management" 
+                  sequence="10"/>
+        
+        <!-- Humans Menu -->
+        <menuitem id="menu_human_human" 
+                  name="Humans" 
+                  parent="menu_root" 
+                  action="action_human_human" 
+                  sequence="1"/>
+        
+        <!-- Superhumans Menu -->
+        <menuitem id="menu_human_superhuman" 
+                  name="Superhumans" 
+                  parent="menu_root" 
+                  action="action_human_superhuman" 
+                  sequence="2"/>
+        
+        <!-- Customers Menu -->
+        <menuitem id="menu_human_customer" 
+                  name="Customers" 
+                  parent="menu_root" 
+                  action="action_human_customer" 
+                  sequence="3"/>
+    </data>
+</odoo>

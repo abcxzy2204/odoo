@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="view_human_tree" model="ir.ui.view">
+            <field name="name">human.human.tree</field>
+            <field name="model">human.human</field>
+            <field name="arch" type="xml">
+                <tree string="Humans">
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_human_form" model="ir.ui.view">
+            <field name="name">human.human.form</field>
+            <field name="model">human.human</field>
+            <field name="arch" type="xml">
+                <form string="Human">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="age"/>
+                            <field name="gender"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_human_human" model="ir.actions.act_window">
+            <field name="name">All Humans</field>
+            <field name="res_model">human.human</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

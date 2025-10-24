@@ -1,0 +1,61 @@
+<odoo>
+    <data>
+        <record id="view_superhuman_tree" model="ir.ui.view">
+            <field name="name">human.superhuman.tree</field>
+            <field name="model">human.superhuman</field>
+            <field name="arch" type="xml">
+                <tree string="Superhumans">
+                    <field name="name"/>
+                    <field name="age"/>
+                    <field name="gender"/>
+                    <field name="power"/>
+                    <field name="origin"/>
+                    <field name="is_team_leader"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_superhuman_form" model="ir.ui.view">
+            <field name="name">human.superhuman.form</field>
+            <field name="model">human.superhuman</field>
+            <field name="arch" type="xml">
+                <form string="Superhuman">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="age"/>
+                                <field name="gender"/>
+                            </group>
+                            <group>
+                                <field name="power"/>
+                                <field name="origin"/>
+                                <field name="weakness"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="is_team_leader"/>
+                            <field name="parent_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Team Members">
+                                <field name="child_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="power"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_human_superhuman" model="ir.actions.act_window">
+            <field name="name">Superhumans</field>
+            <field name="res_model">human.superhuman</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>
